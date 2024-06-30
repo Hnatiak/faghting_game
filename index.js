@@ -117,6 +117,7 @@ function decreaseTimer() {
         timer --;
         // ? console.log(timer)
         document.querySelector('#timer').innerHTML = timer
+
     }
 
     if(timer === 0) {
@@ -179,7 +180,6 @@ function animate() {
         player.health -= 10
         document.querySelector('#playerHealth').style.width = player.health + '%'  // `${player.health}%`
         // ========================================================================================
-        console.log('I hit player')
     }
 
     // ========================================================================================
@@ -198,6 +198,10 @@ animate()
 // ============================= Move Characters with Event Listeners =====================
 
 window.addEventListener('keydown', (event) => {
+    if (timer === 0) return;
+
+    if (player.health <= 0 || enemy.health <= 0) return;
+
     switch(event.key) {
         case 'd':
             keys.d.pressed = true
