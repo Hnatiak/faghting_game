@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+.timer {
+    border: 10px solid red; 
+    height: 90px; 
+    width: 90px; 
+    flex-shrink: 0; 
+    background-color: white; 
+    border-radius: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    span {
+        font-size: 40px;
+    }
+}
+
+.enemyHealthContainer {
+    position: relative; 
+    height: 30px; 
+    width: 100%;
+}
+
+.enemyHealthOne {
+    border: 5px solid yellow; 
+    height: 30px; 
+    border-radius: 0px 50px 50px 0px; 
+    position: relative; 
+    z-index: 1;
+}
+
+.enemyHealthTwo {
+    position: absolute; 
+    background-color: red; 
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+    border-radius: 0px 50px 50px 0px;
+    transition: width 0.3s;
+}
+
+.PlayerHealthContainer {
+    position: relative; 
+    height: 30px; 
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.playerHealthOne {    
+    border: 5px solid yellow; 
+    height: 30px; 
+    border-radius: 50px 0px 0px 50px; 
+    position: relative; 
+    z-index: 1;
+    width: 100%; 
+}
+
+.playerHealthTwo {
+    position: absolute; 
+    background-color: red; 
+    top: 0; 
+    right: 0; 
+    bottom: 0;
+    width: 100%;
+    border-radius: 50px 0px 0px 50px;
+    transition: width 0.3s;
+}
+
+
+.msg {
+    position: absolute;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 100px;
+    font-weight: bold;
+    z-index: 2;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div style="position: relative; display: inline-block;">
+        <!-- Smaller red container div -->
+        <!-- health bar -->
+        <div style="position: absolute; display: flex; align-items: center; width: 100%; padding: 20px;">
+            <!-- player health -->
+            <div class="PlayerHealthContainer">
+                <div class="playerHealthOne"></div>
+                <div id="playerHealth" class="playerHealthTwo"></div>
+            </div>
+            <!-- timer -->
+            <div class="timer"><span id="timer">10</span></div>
+            <!-- enemy health -->
+            <div class="enemyHealthContainer">
+                <div class="enemyHealthOne"></div>
+                <div id="enemyHealth" class="enemyHealthTwo"></div>
+            </div>
+        </div>
+
+        <!-- ========== -->
+
+        <!-- timer and finish game msg -->
+
+        <div id="displayText" class="msg"></div>
+
+        <!-- fight area -->
+
+        <canvas></canvas>
+
+        <!-- ========== -->
+
+        <div>
+            <p>Player1 - Arrow Keys and Enter for hit</p> <p>Player2 - W/A/S/D and Space for hit</p>
+        </div>
+    </div>
+
+    <script src="./js/classes.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
